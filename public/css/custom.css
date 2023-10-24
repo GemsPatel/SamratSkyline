@@ -1,0 +1,132 @@
+/*!
+ *   ShreeGurave
+ *   Author: Gautam Kakadiya
+ *   Website: ShreeGurave <https://ShreeGurave.com>
+ */
+
+*{
+      margin: 0;
+      padding: 0;
+  }
+  .rate {
+      float: left;
+      height: 46px;
+      padding: 0 10px;
+  }
+  .rate:not(:checked) > input {
+      position:absolute;
+      top:-9999px;
+  }
+  .rate:not(:checked) > label {
+      float:right;
+      width:1em;
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:30px;
+      color:#ccc;
+  }
+  .rate:not(:checked) > label:before {
+      content: '★ ';
+  }
+  .rate > input:checked ~ label {
+      color: #ffc700;
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+      color: #deb217;  
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+      color: #c59b08;
+  }
+
+.toast-custom {
+    position: fixed;
+    top: 50px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #7fac82;
+    width: auto;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    border-radius: 8px;
+}
+@media screen and (max-width: 600px) {
+    .toast-custom{
+        max-width: 90%;
+    }
+}
+#type_iocn_wrap {
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.toast-custom #type_iocn {
+    color: #7fac82;
+}
+.toast-custom.error #type_iocn {
+    color: #dc3545;
+}
+.toast-custom.warning #type_iocn {
+    color: #ffc107;
+}
+.toast-custom.warning {
+    background-color: #ffc107;
+}
+.toast-custom.error {
+    background-color: #dc3545;
+}
+.toast-custom p {
+    color: #ffffff;
+    margin: 0;
+    margin-left: 25px;
+}
+
+.title-badge{
+    font-size: 13px;
+    font-weight: normal!important;
+    background-color: #343a40;
+    border-radius: 3px;
+    line-height: 1.5;
+    padding: 5px 10px;
+}
+.badge .fa-times { color: red; }
+
+.auto-search-drp{ transform: none !important; top: 100% !important; height: auto;}
+.row-border{border: 1px solid #c8cacc; padding: 5px; margin-bottom: 5px;}
+
+.border-red {border: 1px solid red; border-radius: 5px;}
+.select2-container .select2-selection--multiple .select2-selection__rendered{display: table-row-group !important;}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{ background-color: #343a40 !important; border: 1px solid #343a40 !important; padding: unset !important; padding-left: 15px !important; padding-right: 5px !important; }
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{color: #f00 !important;padding: 0px !important; border-right: 0px solid #aaa !important; }
+.playpause {
+     border: 0;
+     background: transparent;
+     box-sizing: border-box;
+     width: 0;
+     height: 40px;
+     border-color: transparent transparent transparent #202020;
+     transition: 100ms all ease;
+     cursor: pointer;
+     border-style: solid;
+     border-width: 20px 0 20px 30px;
+	 margin-bottom: 30px;
+}
+ .playpause.paused {
+     border-style: double;
+     border-width: 0px 0 0px 30px;
+}
+ .playpause:hover {
+     border-color: transparent transparent transparent #404040;
+}

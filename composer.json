@@ -1,0 +1,101 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "Online Podcasting Service",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0",
+        "aws/aws-sdk-php": "^3.208",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "cion/laravel-text-to-speech": "^1.5",
+        "doctrine/dbal": "^3.1",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^3.0",
+        "google/cloud-storage": "^1.23",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/support": "^8.0",
+        "intervention/image": "^2.7",
+        "laravel/cashier": "^12.4",
+        "laravel/framework": "^8.65",
+        "laravel/passport": "^10.1",
+        "laravel/sanctum": "^2.11",
+        "laravel/socialite": "^5.2",
+        "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.3",
+        "league/flysystem-aws-s3-v3": "~1.0",
+        "league/mime-type-detection": "^1.9",
+        "league/oauth2-client": "^2.6",
+        "maatwebsite/excel": "^3.1",
+        "owen-oj/laravel-getid3": "^1.3",
+        "spatie/laravel-html": "^3.2",
+        "spatie/laravel-medialibrary": "9.9.1",
+        "spatie/laravel-permission": "^3.17",
+        "stevebauman/location": "^5.1",
+        "stripe/stripe-php": "^7.68",
+        "superbalist/laravel-google-cloud-storage": "^2.2",
+        "symfony/mailer": "^6.1",
+        "twilio/sdk": "^6.32",
+        "tymon/jwt-auth": "^1.0.0-rc.2",
+        "unicodeveloper/laravel-paystack": "^1.0",
+        "yajra/laravel-datatables": "1.5"
+    },
+    "require-dev": {
+        "facade/ignition": "^2.5",
+        "fakerphp/faker": "^1.9.1",
+        "laravel/sail": "^1.0.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^5.10",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "database",
+            "database/seeders",
+            "database/factories"
+        ],
+        "files": [
+            "app/Helpers/functions.php",
+            "app/Helpers/common.php",
+            "app/Helpers/easy-solution.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
