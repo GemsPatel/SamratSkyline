@@ -184,6 +184,8 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
 
         Intervention\Image\ImageServiceProvider::class,
+
+        Weidner\Goutte\GoutteServiceProvider::class,//https://zubairidrisaweda.medium.com/introduction-to-web-scraping-with-laravel-a217e1444f7c
     ],
 
     /*
@@ -245,6 +247,8 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         'Image' => Intervention\Image\Facades\Image::class,
+
+        'Goutte' => Weidner\Goutte\GoutteFacade::class,
     ],
 
 ];

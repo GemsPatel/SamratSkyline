@@ -38,6 +38,7 @@
         "twilio/sdk": "^6.32",
         "tymon/jwt-auth": "^1.0.0-rc.2",
         "unicodeveloper/laravel-paystack": "^1.0",
+        "weidner/goutte": "^2.3",
         "yajra/laravel-datatables": "1.5"
     },
     "require-dev": {
